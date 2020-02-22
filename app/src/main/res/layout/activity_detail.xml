@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ctmbg"
+    android:id="@+id/ll"
+    tools:context=".DetailActivity">
+
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"/>
+    <me.itangqi.waveloadingview.WaveLoadingView
+        android:id="@+id/wvpgs"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        app:wlv_borderColor="@color/colorAccent"
+        app:wlv_shapeType="circle"
+        app:wlv_borderWidth="3dp"
+        android:layout_gravity="center"
+        app:wlv_triangle_direction="north"
+
+        app:wlv_titleCenterStrokeColor="@android:color/holo_blue_dark"
+        app:wlv_titleCenterStrokeWidth="3dp"
+        app:wlv_titleCenterColor="@android:color/white"
+        app:wlv_titleCenterSize="24dp"
+
+        app:wlv_titleBottomStrokeColor="@android:color/holo_blue_dark"
+        app:wlv_titleBottomStrokeWidth="3dp"
+        app:wlv_titleBottomColor="@android:color/white"
+        app:wlv_titleBottomSize="24dp"
+
+        app:wlv_titleTopStrokeColor="@android:color/holo_blue_dark"
+        app:wlv_titleTopStrokeWidth="3dp"
+        app:wlv_titleTopColor="@android:color/white"
+        app:wlv_titleTopSize="24dp"
+
+        app:wlv_waveAmplitude="70"
+        app:wlv_waveColor="#b30000"
+        />
+
+    <TextView
+        android:id="@+id/txtper"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"
+        android:textSize="40dp"
+        android:text="40%"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+        android:layout_height="wrap_content"
+         />
+
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"/>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:textSize="20dp"
+        android:text="Patient name" />
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"/>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:fontFamily="serif-monospace"
+        android:text="Fluid name" />
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BotleMeasure</string>
+    <string name="bed_no_1">Bed No 1</string>
+    <string name="start_measuring">Start Measuring</string>
+</resources>
