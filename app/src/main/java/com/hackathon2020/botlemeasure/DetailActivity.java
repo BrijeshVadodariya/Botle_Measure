@@ -15,15 +15,38 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
         Intent intent=getIntent();
         Bundle bundle=intent.getExtras();
         bedno=bundle.getInt("bedno");
         fluid=bundle.getInt("fluid");
         setTitle("Bed no. "+bedno+" details");
         waveLoadingView=findViewById(R.id.wvpgs);
-        waveLoadingView.setProgressValue(fluid);
+       // waveLoadingView.setProgressValue(50);
         textView=findViewById(R.id.txtper);
-        textView.setText(String.valueOf(fluid)+"%");
+        textView.setText(fluid+"%");
+
+        new Thread(new Runnable() {
+            public void run(){
+                while (true){
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException e){
+                        Thread.currentThread().interrupt();
+                        System.out.println(
+                                "Thread was interrupted, Failed to complete operation");
+                    }
+                    System.out.println("AA "+MainActivity.getFinalans());
+                    waveLoadingView.setProgressValue((int) MainActivity.getFinalans());
+                    textView.setText(MainActivity.getFinalans()+"%");
+
+                }
+            }
+        }).start();
+
+
     }
+
+
 
 }
